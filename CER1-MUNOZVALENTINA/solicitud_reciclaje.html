@@ -1,0 +1,118 @@
+<!-- DESCRIPCIÓN DEL PROYECTO PARA CERTAMEN 1:
+"Tienda Verde" es una pequeña empresa local dedicada a la venta de productos ecológicos y sostenibles. En su
+esfuerzo por promover el reciclaje entre sus clientes, la empresa ha decidido implementar una funcionalidad
+adicional en su sitio web: un formulario de solicitud de elementos reciclables. Este formulario permitirá a los usuarios
+solicitar la recolección de residuos específicos desde sus hogares.
+
+ESTRUCTURA DE LA WEB:
+    1.3. Solicitud de Reciclaje: Un formulario para que los usuarios puedan solicitar la recolección de residuos
+reciclables.   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitud para Reciclaje</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <!-- BARRA DE MENÚ RESPONSIVA -->
+    <!-- debemos definir distintos breakpoints para que se genere la adaptación en caso de cambio de pantalla -->
+    <nav id="menu" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid margen">
+            <!-- LOGO -->
+            <a class="navbar-brand" href="pag_principal.html">
+                <img id="logo" src="img/logo.png" alt="logo de Tienda Verde" class="img-fluid" style="width: 120px;">
+            </a>
+            <!-- BOTÓN HAMBURGUESA PARA MÓVILES -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- CONTENIDO DEL MENÚ -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pag_principal.html">Página Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo_productos.html">Catálogo de Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solicitud_reciclaje.html">Solicitud de Reciclaje</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FORMULARIO DE RECOLECCIÓN -->
+    <div id="formContainer" class="container mt-5">
+        <br>
+        <h1 class="text-center">Formulario de Solicitud de Elementos Reciclables</h1>
+        <br>
+        <form id="Formulario">
+            <!-- Campo de Selección del Tipo de Residuo -->
+            <div class="mb-3">
+                <label for="tipoResiduo" class="form-label">Tipo de Residuo:</label>
+                <select class="form-select" id="tipoResiduo" required>
+                    <option value="" disabled selected>Seleccione un tipo de residuo</option>
+                    <option value="plastico">Plástico</option>
+                    <option value="papel">Papel</option>
+                    <option value="vidrio">Vidrio</option>
+                    <option value="metales">Metales</option>
+                    <option value="electronicos">Electrónicos</option>
+                </select>
+                <div class="invalid-feedback">Seleccione un tipo de residuo.</div>
+            </div>
+
+            <!-- Subcategorías del Tipo de Residuo -->
+            <div class="mb-3">
+                <label for="subcategoriaResiduo" class="form-label">Subcategoría del Residuo:</label>
+                <select class="form-select" id="subcategoriaResiduo" required>
+                    <option value="" disabled selected>Seleccione una subcategoría</option>
+                </select>
+                <div class="invalid-feedback">Seleccione una subcategoría.</div>
+            </div>
+
+            <!-- Nombre del solicitante -->
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="invalid-feedback">Ingrese su nombre.</div>
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="correo" required>
+                <div class="invalid-feedback">Ingrese un correo electrónico válido.</div>
+            </div>
+
+            <!-- Dirección -->
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" required>
+                <div class="invalid-feedback">Ingrese su dirección.</div>
+            </div>
+
+            <!-- Comentarios Adicionales -->
+            <div class="mb-3">
+                <label for="comentarios" class="form-label">Comentarios Adicionales:</label>
+                <textarea class="form-control" id="comentarios" rows="3"></textarea>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn btn-dark">Enviar Solicitud</button>
+        </form>
+        <br>
+    </div>
+    <br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/solicitud.js"></script>
+</body>
+
+</html>

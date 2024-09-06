@@ -1,0 +1,126 @@
+<!-- DESCRIPCIÓN DEL PROYECTO PARA CERTAMEN 1:
+"Tienda Verde" es una pequeña empresa local dedicada a la venta de productos ecológicos y sostenibles. En su
+esfuerzo por promover el reciclaje entre sus clientes, la empresa ha decidido implementar una funcionalidad
+adicional en su sitio web: un formulario de solicitud de elementos reciclables. Este formulario permitirá a los usuarios
+solicitar la recolección de residuos específicos desde sus hogares.
+
+ESTRUCTURA DE LA WEB:
+    1.1. Página Principal: Con una breve descripción de la empresa, un menú de navegación y una galería de
+productos destacados.   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Verde - Página Principal</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <!-- BARRA DE MENÚ RESPONSIVA -->
+    <!-- debemos definir distintos breakpoints para que se genere la adaptación en caso de cambio de pantalla -->
+    <nav id="menu" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid margen">
+            <!-- LOGO -->
+            <a class="navbar-brand" href="pag_principal.html">
+                <img id="logo" src="img/logo.png" alt="logo de Tienda Verde" class="img-fluid" style="width: 120px;">
+            </a>
+            <!-- BOTÓN HAMBURGUESA PARA MÓVILES -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- CONTENIDO DEL MENÚ -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pag_principal.html">Página Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo_productos.html">Catálogo de Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solicitud_reciclaje.html">Solicitud de Reciclaje</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- RESTO DEL CONTENIDO DE LA PÁGINA -->
+    <!-- Breve descripción de la empresa -->
+    <div id="intro" class="container-fluid">
+        <div class="row">
+            <div class="col margen">
+                <h1 class="text-center">Bienvenid@ a Tienda Verde</h1>
+                <br>
+                <!-- Texto inventado jeje -->
+                <p><strong>"Tienda Verde"</strong> es una pequeña empresa local comprometida con el cuidado del 
+                    medio ambiente y la 
+                    promoción de un estilo de vida más sostenible. Desde su creación, Tienda Verde se ha dedicado 
+                    a ofrecer productos ecológicos de alta calidad que ayudan a sus clientes a reducir su impacto 
+                    ambiental. La tienda cuenta con una amplia variedad de productos, que van desde artículos de 
+                    higiene personal y limpieza del hogar hasta productos reutilizables y materiales reciclados. 
+                    <br><br>
+                    Además de su enfoque en la sostenibilidad, <strong>Tienda Verde</strong> se esfuerza por educar 
+                    a su comunidad sobre la importancia del reciclaje, el consumo 
+                    responsable y la reducción de residuos. A través de iniciativas como el programa de recolección  
+                    de reciclables y la promoción de productos de bajo impacto, <strong>Tienda Verde</strong> busca 
+                    inspirar un cambio positivo en los hábitos de consumo. <br><br>
+                    <!-- Invitación a probar la nueva funcionalidad -->
+                    Prueba nuestro nuevo sistema de recolección de <a href="solicitud_reciclaje.html" 
+                    class="link-dark">Recolección de Residuos Reciclables a domicilio</a></p>
+            </div>
+            <!-- Logo -->
+            <div class="col-4 margen">
+                <img src="img/logocuadrado2.png" class="img-fluid objectfit1" alt="logo de Tienda Verde en modo cuadrado y colores claros">    
+            </div>
+        </div>
+    </div>
+
+    <!-- Galería de productos destacados -->
+    <div id="galeria" class="container-fluid">
+        <!-- Mostrar una lista de productos con imágenes y descripciones breves. -->
+        <div class="row">
+            <div class="col-1"><br></div>
+            <!-- Producto 1 -->
+            <div class="col-md-3 margen">
+                <div class="card">
+                    <img src="img/producto1.jpg" class="card-img-top" alt="Producto 1" style="width:70%">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto Ecológico 1</h5>
+                        <p class="card-text">Este es un producto reutilizable fabricado con materiales 100% ecológicos. Ideal para un estilo de vida sostenible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col-md-3 margen">
+                <div class="card">
+                    <img src="img/producto2.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto Ecológico 2</h5>
+                        <p class="card-text">Producto de limpieza biodegradable, perfecto para cuidar el medio ambiente sin dejar de mantener tu hogar limpio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col-md-3 margen">
+                <div class="card">
+                    <img src="img/producto3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto Ecológico 3</h5>
+                        <p class="card-text">Este artículo de higiene personal está hecho con ingredientes naturales y empaques reciclables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <a class="btn btn-dark col-12" href="catalogo_productos.html" role="button">Ver catálogo completo</a>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>
